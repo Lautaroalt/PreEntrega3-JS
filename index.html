@@ -1,0 +1,49 @@
+<!-- index.html (HTML con Bootstrap) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WestCoast</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">WestCoast</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Productos Disponibles</h2>
+                <ul class="list-group" id="productos">
+                    <li class="list-group-item">
+                        <span>Camiseta</span>
+                        <button class="btn btn-primary float-right" data-producto="Camiseta" data-precio="20.00">Agregar al Carrito</button>
+                    </li>
+                    <li class="list-group-item">
+                        <span>Pantalones</span>
+                        <button class="btn btn-primary float-right" data-producto="Pantalones" data-precio="35.00">Agregar al Carrito</button>
+                    </li>
+                    <li class="list-group-item">
+                        <span>Chaqueta</span>
+                        <button class="btn btn-primary float-right" data-producto="Chaqueta" data-precio="50.00">Agregar al Carrito</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Carrito de Compras</h2>
+                <ul class="list-group" id="carrito">
+                </ul>
+                <p class="text-right">Total: $<span id="total">0.00</span></p>
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
