@@ -1,20 +1,15 @@
-// app.js (JavaScript separado)
 var carrito = [];
 var total = 0;
 
-// Función para agregar un producto al carrito
 function agregarAlCarrito(producto, precio) {
     carrito.push({ producto, precio });
     total += precio;
 
-    // Actualizar el carrito en el DOM
     mostrarCarrito();
     
-    // Guardar el carrito en el almacenamiento local
     guardarCarritoEnLocalStorage();
 }
 
-//Funcion que elimina el produccto del carrito
 function eliminarDelCarrito(index) {
     var productoEliminado = carrito.splice(index, 1)[0];
     total -= productoEliminado.precio;
@@ -49,13 +44,11 @@ function mostrarCarrito() {
     }
 }
 
-// Función para guardar el carrito en el almacenamiento local
 function guardarCarritoEnLocalStorage() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
     localStorage.setItem('total', total.toFixed(2));
 }
 
-// Función para cargar el carrito desde el almacenamiento local
 function cargarCarritoDesdeLocalStorage() {
     var carritoGuardado = localStorage.getItem('carrito');
     var totalGuardado = localStorage.getItem('total');
@@ -67,7 +60,6 @@ function cargarCarritoDesdeLocalStorage() {
     }
 }
 
-// Asociar funciones a los botones utilizando eventos
 var buttons = document.querySelectorAll('.btn-primary');
 
 buttons.forEach(function(button) {
@@ -78,7 +70,6 @@ buttons.forEach(function(button) {
     });
 });
 
-// Cargar el carrito desde el almacenamiento local al cargar la página
 cargarCarritoDesdeLocalStorage();
 
 
